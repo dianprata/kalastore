@@ -32,9 +32,9 @@ module.exports = {
   variants: {},
   plugins: [],
   purge: {
-    enabled: process.env.NODE_ENV === 'production',
+    enabled: true,
     content: [
-      './public/**/*.html',
+      './src/**/*.html',
       './src/**/*.vue',
     ],
   },
