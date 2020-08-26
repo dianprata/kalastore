@@ -1,0 +1,35 @@
+.responsive-nav {
+ @media screen and (min-width: 768px) {
+  width: 500px;
+  text-align: center;
+ }
+}
+.navbar-item-responsive {
+ position: fixed;
+ top: 45px;
+ left: 0;
+ width: 100%;
+ padding: .5rem 0;
+ z-index: 9000;
+ -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, var(--vs-shadow-opacity));
+ box-shadow: 0 10px 25px 0 rgba(0, 0, 0, var(--vs-shadow-opacity));
+ border-radius: 0 0 15px 15px;
+ background: rgba(var(--vs-background), 1);
+ a {
+  display: block;
+  width: 100%;
+  padding: .5rem 1rem;
+  color: rgba(var(--vs-text), 1);
+
+  &:hover, &:focus {
+   background-color: rgba(var(--vs-primary), 1);
+   color: #fff;
+  }
+ }
+}
+
+.vs-navbar-content.paddingScroll:not(.paddingScrollActive) {
+ ~ .navbar-item-responsive {
+  top: 85px;
+ }
+}
